@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #1a1a2e;
+  background: #f0f2f5;
+}
+
+/* ── Shared Navbar classes ── */
+.nav-link {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: color 0.25s;
+  position: relative;
+  padding: 4px 0;
+}
+.nav-link:hover { color: #fff; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: #e94560;
+  transition: width 0.3s;
+  border-radius: 1px;
+}
+.nav-link:hover::after,
+.nav-link.active::after { width: 100%; }
+.nav-link.active { color: #fff; font-weight: 600; }
+
+.nav-btn {
+  padding: 8px 20px;
+  background: #e94560;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.25s;
+  font-family: 'DM Sans', sans-serif;
+}
+.nav-btn:hover { background: #d63851; transform: translateY(-1px); }
+
+.nav-btn-outline {
+  padding: 8px 20px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.25s;
+  font-family: 'DM Sans', sans-serif;
+}
+.nav-btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+/* ── Footer link ── */
+.footer-link {
+  display: block;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 10px;
+  transition: color 0.25s;
+}
+.footer-link:hover { color: #e94560; }
+
+/* ── Page header banner ── */
+.page-header {
+  background: linear-gradient(160deg, #0a2647 0%, #0f3460 60%, #162a50 100%);
+  color: #fff;
+  padding: 56px 48px;
+  text-align: center;
+}
+.page-header h1, .page-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  letter-spacing: -0.3px;
+}
+.page-header p {
+  font-size: 16px;
+  opacity: 0.75;
+  margin: 0;
+}
